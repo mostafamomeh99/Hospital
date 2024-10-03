@@ -1,0 +1,27 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+@{
+    <h1>Complete Appointment With @Model.Name</h1>
+}
+<form asp-controller="Appointment" asp-action="Book" method="post">
+    <div class="mb-3">
+        <label for="PatientName" class="form-label">Patient Name</label>
+        <input type="text" class="form-control" id="PatientName" name="PatientName" required>
+    </div>
+@*     <div class="mb-3">
+        <label for="DoctorName" class="form-label">Doctor Name</label>
+        <input type="text" class="form-control" id="DoctorName" name="DoctorName" value="@Model.Name" disabled>
+    </div> *@
+    <div class="mb-3">
+        <label for="AppointmentDate" class="form-label">Appointment Date</label>
+        <input type="date" class="form-control" id="AppointmentDate" name="AppointmentDate" required>
+    </div>
+    <div class="mb-3">
+        <label for="AppointmentTime" class="form-label">Appointment Time</label>
+        <input type="time" class="form-control" id="AppointmentTime" name="AppointmentTime" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Book</button>
+</form>
